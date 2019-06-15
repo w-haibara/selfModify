@@ -21,7 +21,10 @@ int main(void){
 		perror("mmap");
 		return 1;
 	}
-	
+
+	printf("code[14] : ");
+	scanf("%hhd", &code[14]);	
+
 	memcpy(ptr, code, sizeof(code));
 	
 	void (*funcptr)(int*) = ptr;
